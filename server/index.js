@@ -2,7 +2,9 @@ const express = require('express');
 const { MongoClient } = require('mongodb');
 const cors = require('cors');
 require('dotenv').config();
+
 const facilitiesRoute = require('./routes/facilities');
+const waitTimesRoute = require('./routes/waitTimes');
 
 const app = express();
 app.use(cors());
@@ -17,6 +19,7 @@ async function startServer() {
     const db = client.db('mosaic');
 
     app.use('/api/facilities', facilitiesRoute(db));
+    app.use('/api/wait-times', waitTimesRoute(db));
 
     app.listen(3000, () => console.log('✅ Server running on port 3000'));
   } catch (err) {
