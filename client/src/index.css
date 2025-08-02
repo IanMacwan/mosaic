@@ -7,6 +7,10 @@ body {
   font-family: 'Cascadia Code', monospace;
 }
 
+.cascadia-code-font {
+    font-family: 'Cascadia Code', monospace;
+}
+
 /* Override the popup container itself */
 .maplibregl-popup {
   background: transparent !important;
