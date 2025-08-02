@@ -1,1 +1,28 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+    themes: forest, abyss, dark;
+}
+
+body {
+  font-family: 'Cascadia Code', monospace;
+}
+
+/* Override the popup container itself */
+.maplibregl-popup {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Override the popup content */
+.maplibregl-popup-content {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Remove the triangle tip */
+.maplibregl-popup-tip {
+  display: none !important;
+}

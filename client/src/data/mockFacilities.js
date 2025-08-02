@@ -1,0 +1,51 @@
+export default [
+  {
+    id: 1,
+    name: 'Downtown Walk-In Clinic',
+    type: 'some words',
+    lat: 43.654,
+    lon: -79.384,
+    open: true,
+  },
+  {
+    id: 2,
+    name: 'Queen St. Pharmacy',
+    type: 'Pharmacy',
+    lat: 43.652,
+    lon: -79.382,
+    open: true,
+  },
+  {
+    id: 3,
+    name: 'Toronto Urgent Care',
+    type: 'Urgent Care',
+    lat: 43.651,
+    lon: -79.386,
+    open: false,
+  },
+  {
+    id: 4,
+    name: 'Toronto Urgent Care',
+    type: 'Urgent Care',
+    lat: 50.651,
+    lon: -80.386,
+    open: false,
+  },
+  {
+    id: 5,
+    name: 'Toronto Urgent Care',
+    type: 'Urgent Care',
+    lat: 55.651,
+    lon: -85.386,
+    open: false,
+  },
+  {
+    id: 6,
+    name: 'Toronto Urgent Care',
+    type: 'Urgent Care',
+    lat: 60.651,
+    lon: -90.386,
+    open: false,
+  },
+];
+
