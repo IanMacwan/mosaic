@@ -5,6 +5,7 @@ require('dotenv').config();
 
 const facilitiesRoute = require('./routes/facilities');
 const waitTimesRoute = require('./routes/waitTimes');
+const geminiRoute = require('./routes/gemini');
 
 const app = express();
 app.use(cors());
@@ -16,10 +17,13 @@ const client = new MongoClient(uri);
 async function startServer() {
   try {
     await client.connect();
+
     const db = client.db('mosaic');
+    app.set('db', db);
 
     app.use('/api/facilities', facilitiesRoute(db));
     app.use('/api/wait-times', waitTimesRoute(db));
+    app.use('/api/gemini-query', geminiRoute);
 
     app.listen(3000, () => console.log('✅ Server running on port 3000'));
   } catch (err) {
